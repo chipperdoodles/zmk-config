@@ -34,7 +34,7 @@ jobs:
       - name: West Zephyr export
         run: west zephyr-export
       - name: West Build (p340)
-        run: -s zmk/app -b plapple340
+        run: -s zmk/app -b plapple340 -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: p340 DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/plapple340.dts.pre.tmp
