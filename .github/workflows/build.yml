@@ -33,17 +33,17 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (Nibble)
-        run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=nibble -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: Nibble DTS File
+      - name: West Build (p340)
+        run: west build -s zmk/app -b plapple340 -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: p340 DTS File
         if: ${{ always() }}
-        run: cat -n build/zephyr/nice_nano_v2.dts.pre.tmp
-      - name: Nibble Kconfig file
+        run: cat -n build/zephyr/plapple340.dts.pre.tmp
+      - name: p340 Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 nibble_nice_nano_v2.uf2
-      - name: Archive (Nibble)
+        run: cp build/zephyr/zmk.uf2 plapple340.uf2
+      - name: Archive (p340)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: nibble_nice_nano_v2.uf2
+          path: plapple340.uf2
