@@ -27,10 +27,6 @@ config SSD1306
 config SSD1306_REVERSE_MODE
 	default y
 
-choice ZMK_DISPLAY_STATUS_SCREEN
-	default ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN
-endchoice
-
 endif # ZMK_DISPLAY
 
 if LVGL
