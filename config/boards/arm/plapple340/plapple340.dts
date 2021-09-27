@@ -91,10 +91,11 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                RC(4,8) 
 };
 
 &i2c0 {
-	compatible = "nordic,nrf-twim";
+	compatible = "nordic,nrf-twi";
 	status = "okay";
 	sda-pin = <24>;
 	scl-pin = <23>;
+	clock-frequency = <400000>;
 
 	ssd1306@3c {
 		compatible = "solomon,ssd1306fb";
