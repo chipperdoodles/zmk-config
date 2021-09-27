@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021 Nick Winans
+ * Copyright (c) 2021 Martin Knobel
  *
  * SPDX-License-Identifier: MIT
  */
@@ -33,18 +33,18 @@
 
 		func_layer {
 // -----------------------------------------------------------------------------------------------------------------------------------------------
-// | rst |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10  |  F11  |  F12  |bootldr|   |  NUM |     =    |   /  |  Ext Pwr  |
+// | rst |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10  |  F11  |  F12  |bootldr|   |  NUM |  bt Clear|   /  |  Ext Pwr  |
 // |  TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   "|"   |  			|  7   |     8    |   9  |  BT PREV  |
 // |  Mo 1 |  A  |  S  |  D  |  F  |  G  |  left  |  down  |  up  |  right  |  ;  |  '  |     ENTER    |    | BT 4 |  prntscr |   6  |  BT NXT   |
 // |  SHIFT  |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |      SHIFT       |   			| BT 1 |    BT 2  | BT 3 |           |
 // |  CTL  |  WIN  |  ALT  |            SPACE              |  ALT  |  WIN  |  MO(1) |  CTL  |   			|    BT 0    |  Out USB  | Out Tog   |
 // -----------------------------------------------------------------------------------------------------------------------------------------------
 			bindings = <
-	&reset  &kp F1   &kp F2    &kp F3  &kp F4 &kp F5  &kp F6  &kp F7   &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &bootloader     &kp KP_NUM    &kp KP_EQUAL    &kp KP_DIVIDE &ext_power EP_TOG
-	&trans  &trans   &trans    &trans  &trans   &trans &trans &trans  &trans   &trans   &trans   &trans  &trans &trans  &kp KP_N7     &kp KP_N8       &kp KP_N9     &bt BT_PRV
-	&trans  &trans   &trans    &trans  &trans   &trans &kp LEFT &kp DOWN &kp UP  &kp RIGHT   &trans   &trans   &trans	&bt BT_SEL 4  &kp PSCRN          &kp KP_N6     &bt BT_NXT
-	&trans  &trans   &trans    &trans   &trans &trans     &trans    &trans    &trans   &trans   &trans &trans			&bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3 
-	&trans  &trans   &trans                &trans          &trans      &trans      &trans   &trans						&bt BT_SEL 0		          &out OUT_USB  &out OUT_TOG
+	&reset  &kp F1   &kp F2    &kp F3  &kp F4 &kp F5  &kp F6  &kp F7   &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &bootloader &kp KP_NUM    &bt BT_CLR    &kp KP_DIVIDE &ext_power EP_TOG
+	&trans  &trans   &trans    &trans  &trans   &trans &trans &trans  &trans   &trans   &trans   &trans  &trans &trans   &kp KP_N7     &kp KP_N8       &kp KP_N9     &bt BT_PRV
+	&trans  &trans   &trans    &trans  &trans   &trans &kp LEFT &kp DOWN &kp UP  &kp RIGHT   &trans   &trans   &trans	 &bt BT_SEL 4  &kp PSCRN       &kp KP_N6     &bt BT_NXT
+	&trans  &trans   &trans    &trans   &trans &trans     &trans    &trans    &trans   &trans   &trans &trans			 &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3 
+	&trans  &trans   &trans                &trans          &trans      &trans      &trans   &trans						 &bt BT_SEL 0		           &out OUT_USB  &out OUT_TOG
 			>;
 		};
 	};

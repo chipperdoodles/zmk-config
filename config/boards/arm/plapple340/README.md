@@ -1,9 +1,9 @@
-# nice!60
-![nice!60](https://i.imgur.com/0YWv5PE.png)
+# Plapple340
 
-The nice!60 is a hotswap 60% made by Nice Keyboards. https://nicekeyboards.com/nice-60
 
-## Building nice!60 ZMK firmware
+The Plapple340 is a hotswap 79 key keyboard made by Chipperdoodles. 
+
+## Building ZMK firmware
 ```
-west build -p -b nice60
+west build -p -b plapple340
 ```
