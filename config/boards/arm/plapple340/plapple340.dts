@@ -92,10 +92,9 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                RC(4,8) 
 
 &i2c0 {
 	compatible = "nordic, nrf-twi";
-	status = "okay";
-	clock-frequency = <I2C_BITRATE_FAST>;
 	sda-pin = <24>;
 	scl-pin = <23>;
+	status = "okay";
 
 	ssd13063c {
 		compatible = "solomon,ssd1306fb";
@@ -108,8 +107,6 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                RC(4,8) 
 		display-offset = <0>;
 		multiplex-ratio = <63>;
 		prechargep = <0x22>;
-		segment-remap;
-
 	};
 };
 
