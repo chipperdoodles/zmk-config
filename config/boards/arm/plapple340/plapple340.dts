@@ -96,7 +96,7 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                RC(4,8) 
 	scl-pin = <23>;
 	status = "okay";
 
-	ssd13063c {
+	ssd1306@3c {
 		compatible = "solomon,ssd1306fb";
 		reg = <0x3c>;
 		label = "DISPLAY";
