@@ -78,7 +78,7 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                RC(4,8) 
 	ext-power {
 		compatible = "zmk,ext-power-generic";
 		label = "EXT_POWER";
-		control-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
+		control-gpios = <&gpio0 15 GPIO_ACTIVE_HIGH;
 	};
 
 	vbatt {
@@ -105,7 +105,7 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                RC(4,8) 
 		segment-offset = <0>;
 		page-offset = <0>;
 		display-offset = <0>;
-		multiplex-ratio = <63>;
+		multiplex-ratio = <31>;
 		prechargep = <0x22>;
 	};
 };
