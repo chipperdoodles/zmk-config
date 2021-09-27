@@ -96,17 +96,19 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                RC(4,8) 
 	sda-pin = <24>;
 	scl-pin = <23>;
 
-
 	ssd1306@3c {
 		compatible = "solomon,ssd1306fb";
 		reg = <0x3c>;
 		label = "DISPLAY";
-		height = <32>;
 		width = <128>;
+		height = <32>;		
 		segment-offset = <0>;
 		page-offset = <0>;
 		display-offset = <0>;
 		multiplex-ratio = <31>;
+		segment-remap;
+		com-invdir;
+		com-sequential;
 		prechargep = <0x22>;
 	};
 };
