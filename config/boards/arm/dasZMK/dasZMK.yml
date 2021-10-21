@@ -1,0 +1,12 @@
+file_format: "1"
+id: dasZMK
+name: dasZMK
+type: board
+arch: arm
+features:
+  - keys
+  - display
+outputs:
+  - usb
+  - ble
+url: https://github.com/chipperdoodles/zmk-config
