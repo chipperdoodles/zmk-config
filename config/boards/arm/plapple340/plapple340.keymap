@@ -17,34 +17,34 @@
 		default_layer {
 // ----------------------------------------------------------------------------------------------------------------------
 // | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  |   BKSP   |   | NUM |  /  |  *  |  -  |
-// | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   "|"   |   |  7  |  8  |  9  |  -  |
-// | MO 1 |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |      ENTER    |   |  4  |  5  |  6  |  +  |
+// | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   "|"   |   |  7  |  8  |  9  |  +  |
+// | CAPS |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |      ENTER    |   |  4  |  5  |  6  |  +  |
 // |  SHIFT  |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |      SHIFT       |   |  1  |  2  |  3  |     |
-// |  CTL  |  WIN  |  ALT  |            SPACE              |  ALT  |  WIN  |  CAPS  |  CTL  |   |     0     |  .  | Ent |
+// |  CTL  |  WIN  |  ALT  |            SPACE              |  ALT  |  WIN  |   FN   |  CTL  |   |     0     |  .  | Ent |
 // ----------------------------------------------------------------------------------------------------------------------
 			bindings = <
 	&gresc  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS &kp EQUAL  &kp BSPC		&kp KP_NUM &kp KP_DIVIDE &kp KP_MULTIPLY &kp KP_MINUS
 	&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp LBKT  &kp RBKT  &kp BSLH		&kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_PLUS
-	&kp CLCK  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI &kp SQT           &kp RET		&kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_EQUAL
+	&kp CLCK  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI &kp SQT           &kp RET		&kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS
 	&kp LSHFT   &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH           &kp RSHFT		&kp KP_N1  &kp KP_N2    &kp KP_N3
-	&kp LCTRL &kp LGUI &kp LALT             &kp SPACE                     &kp RALT  &mo 1  &kp RGUI   &kp RCTRL		&kp KP_N0		    &kp KP_DOT    &kp KP_ENTER
+	&kp LCTRL &kp LGUI &kp LALT             &kp SPACE                     &kp RALT  &kp RGUI &mo 1   &kp RCTRL		&kp KP_N0		    &kp KP_DOT    &kp KP_ENTER
 			>;
 		};
 
 		func_layer {
 // -----------------------------------------------------------------------------------------------------------------------------------------------
-// | rst |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10  |  F11  |  F12  |bootldr|   |  NUM |  bt Clear|   /  |  Ext Pwr  |
-// |  TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   "|"   |  			|  7   |     8    |   9  |  BT PREV  |
-// |  Mo 1 |  A  |  S  |  D  |  F  |  G  |  left  |  down  |  up  |  right  |  ;  |  '  |     ENTER    |    | BT 4 |  prntscr |   6  |  BT NXT   |
+// | rst |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10  |  F11  |  F12  |bootldr|   |  NUM |    /     |   *  |   BT PREV |
+// |  TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   "|"   |  			|  7   |     8    |   9  |   BT NXT  |
+// |  Mo 1 |  A  |  S  |  D  |  F  |  G  |  left  |  down  |  up  |  right  |  ;  |  '  | prntSCR?   |      | BT 4 |     5    |   6  |   BT OUT  |
 // |  SHIFT  |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |      SHIFT       |   			| BT 1 |    BT 2  | BT 3 |           |
-// |  CTL  |  WIN  |  ALT  |            SPACE              |  ALT  |  WIN  |  MO(1) |  CTL  |   			|    BT 0    |  Out USB  | Out Tog   |
+// |  CTL  |  WIN  |  ALT  |            SPACE              |  ALT  |  WIN  |  MO(1) |  CTL  |   			|    BT 0    |  Out USB  | USB OUT   |
 // -----------------------------------------------------------------------------------------------------------------------------------------------
 			bindings = <
 	&reset  &kp F1   &kp F2    &kp F3  &kp F4 &kp F5  &kp F6  &kp F7   &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &bootloader &trans				&trans   		&trans 		 &bt BT_PRV
 	&trans  &trans   &trans    &trans  &trans   &trans &trans &trans  &trans   &trans   &trans   &trans  &trans &trans   &trans    			&trans     		&trans    	 &bt BT_NXT
-	&trans  &trans   &trans    &trans  &trans   &trans &trans &trans &trans  &trans   &trans   &trans   &trans			 &bt BT_SEL 4  		&trans    		&trans    	 &out OUT_BLE
+	&trans  &trans   &trans    &trans  &trans   &trans &trans &trans &trans  &trans   &trans   &trans   &kp PSCRN			 &bt BT_SEL 4  		&trans    		&trans    	 &out OUT_BLE
 	&trans  &trans   &trans    &trans   &trans &trans     &trans    &trans    &trans   &trans   &trans &trans			 &bt BT_SEL 1  		&bt BT_SEL 2  	&bt BT_SEL 3 
-	&trans  &trans   &trans                &trans          &trans      &trans      &trans   &trans						 &bt BT_SEL 0		     &bt BT_CLR  			&out OUT_USB
+	&trans  &trans   &trans                &trans          &trans      &trans      &trans   &trans						 		&bt BT_SEL 0		  &bt BT_CLR  	     &out OUT_USB
 			>;
 		};
 	};
