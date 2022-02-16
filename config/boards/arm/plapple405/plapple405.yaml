@@ -1,14 +1,14 @@
-identifier: dasZMK
-name: dasZMK
+identifier: plapple340
+name: plapple340
 type: mcu
 arch: arm
 toolchain:
   - zephyr
   - gnuarmemb
 supported:
+  - i2c
   - adc
   - usb_device
-  - ble
   - ieee802154
   - pwm
   - watchdog

@@ -1,20 +1,18 @@
-# Copyright (c) 2021 Nick Winans
+# Plapple405 keyboard configuration
+
+# Copyright (c) 2022 Martin Knobel
 # SPDX-License-Identifier: MIT
 
-if BOARD_PLAPPLE340
+if BOARD_PLAPPLE405
 
 config ZMK_KEYBOARD_NAME
-	default "plapple340"
+	default "plapple405"
 
-if USB
-
-config USB_NRFX
+config ZMK_USB
 	default y
 
-config USB_DEVICE_STACK
+config ZMK_KSCAN_MATRIX_POLLING
 	default y
-
-endif # USB
 
 if ZMK_DISPLAY
 
@@ -52,16 +50,4 @@ endchoice
 
 endif # LVGL
 
-config BT_CTLR
-	default BT
-
-config ZMK_BLE
-	default y
-
-config ZMK_USB
-	default y
-
-config ZMK_BATTERY_VOLTAGE_DIVIDER
-	default y
-
-endif # BOARD_PLAPPLE340
+endif # BOARD_PLAPPLE405

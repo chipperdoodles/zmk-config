@@ -1,0 +1,6 @@
+# Copyright (c) Martin Knobel
+# SPDX-License-Identifier: MIT
+
+config BOARD_PLAPPLE405
+	bool "plapple405"
+	depends on SOC_STM32F405XG

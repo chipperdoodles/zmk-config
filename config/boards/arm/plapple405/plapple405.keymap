@@ -1,14 +1,12 @@
 /*
- * Copyright (c) 2021 Martin Knobel
+ * Copyright (c) 2022 Martin Knobel
  *
  * SPDX-License-Identifier: MIT
  */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
+
 
 / {
 	keymap {
@@ -40,11 +38,11 @@
 // |  CTL  |  WIN  |  ALT  |            SPACE              |  ALT  |  WIN  |  MO(1) |  CTL  |   			|    BT 0    |  Out USB  | USB OUT   |
 // -----------------------------------------------------------------------------------------------------------------------------------------------
 			bindings = <
-	&reset  &kp F1   &kp F2    &kp F3  &kp F4 &kp F5  &kp F6  &kp F7   &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &bootloader &trans				&trans   		&trans 		 &bt BT_PRV
-	&trans  &trans   &trans    &trans  &trans   &trans &trans &trans  &trans   &trans   &trans   &trans  &trans &trans   &trans    			&trans     		&trans    	 &bt BT_NXT
-	&trans  &trans   &trans    &trans  &trans   &trans &trans &trans &trans  &trans   &trans   &trans   &kp PSCRN			 &bt BT_SEL 4  		&trans    		&trans    	 &out OUT_BLE
-	&trans  &trans   &trans    &trans   &trans &trans     &trans    &trans    &trans   &trans   &trans &trans			 &bt BT_SEL 1  		&bt BT_SEL 2  	&bt BT_SEL 3 
-	&trans  &trans   &trans                &trans          &trans      &trans      &trans   &trans						 		&bt BT_SEL 0		  &bt BT_CLR  	     &out OUT_USB
+	&reset  &kp F1   &kp F2    &kp F3  &kp F4 &kp F5  &kp F6  &kp F7   &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &bootloader &trans				&trans   		&trans 		 &trans
+	&trans  &trans   &trans    &trans  &trans   &trans &trans &trans  &trans   &trans   &trans   &trans  &trans &trans   &trans    			&trans     		&trans    	 &trans
+	&trans  &trans   &trans    &trans  &trans   &trans &trans &trans &trans  &trans   &trans   &trans   &kp PSCRN		 &trans				&trans    		&trans    	 &trans
+	&trans  &trans   &trans    &trans   &trans &trans     &trans    &trans    &trans   &trans   &trans &trans			 &trans  			&trans			&trans
+	&trans  &trans   &trans                &trans          &trans      &trans      &trans   &trans						 		&trans		  &trans	     &trans
 			>;
 		};
 	};

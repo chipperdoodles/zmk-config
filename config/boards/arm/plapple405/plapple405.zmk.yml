@@ -1,6 +1,6 @@
 file_format: "1"
-id: plapple340
-name: Plapple340
+id: plapple405
+name: Plapple405
 type: board
 arch: arm
 exposes: [i2c_oled]
@@ -9,5 +9,4 @@ features:
   - display
 outputs:
   - usb
-  - ble
 url: https://github.com/chipperdoodles/zmk-config

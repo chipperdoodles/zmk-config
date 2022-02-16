@@ -1,0 +1,27 @@
+# Copyright (c) 2022 Martin Knobel
+# SPDX-License-Identifier: MIT
+
+CONFIG_BOARD_PLAPPLE405=y
+
+CONFIG_SOC_SERIES_STM32F4X=y
+CONFIG_SOC_STM32F405XG=y
+
+# Enable MPU
+CONFIG_ARM_MPU=y
+
+# Enable HW stack protection
+CONFIG_HW_STACK_PROTECTION=y
+
+# enable pin controller
+CONFIG_PINCTRL=y
+
+# enable GPIO
+CONFIG_GPIO=y
+
+# enable pinmux
+CONFIG_PINMUX=y
+
+# clock configuration
+CONFIG_CLOCK_CONTROL=y
+
+
