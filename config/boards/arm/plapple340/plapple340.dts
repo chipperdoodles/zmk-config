@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021 Martin Knobel
+ * Copyright (c) 2022 Martin Knobel
  *
  * SPDX-License-Identifier: MIT
  */
@@ -86,7 +86,7 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                RC(4,8) 
 		label = "BATTERY";
 		io-channels = <&adc 3>;
 		output-ohms = <100000>;
-		full-ohms = <(10000 + 100000)>;
+		full-ohms = <(100000 + 100000)>;
 	};
 };
 
