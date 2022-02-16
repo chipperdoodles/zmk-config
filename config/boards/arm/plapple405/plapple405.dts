@@ -69,21 +69,6 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                RC(4,8) 
 
 };
 
-&clk_hse {
-	clock-frequency = <26000000>;
-	status = "okay";
-};
-
-&pll {
-	div-m = <26>;
-	mul-n = <384>;
-	div-p = <4>;
-	div-q = <8>;
-	clocks = <&clk_hse>;
-	status = "okay";
-};
-
-
 &i2c2 {
 	pinctrl-0 = <&i2c2_scl_pb10 &i2c2_sda_pb11>;
 	pinctrl-names = "default";
