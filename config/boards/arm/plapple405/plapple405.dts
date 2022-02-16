@@ -85,7 +85,7 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                RC(4,8) 
 
 &rcc {
 	clocks = <&pll>;
-	clock-frequency = <DT_FREQ_M(156)>;
+	clock-frequency = <DT_FREQ_M(168)>;
 	ahb-prescaler = <1>;
 	apb1-prescaler = <4>;
 	apb2-prescaler = <2>;
