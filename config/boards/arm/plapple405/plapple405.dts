@@ -5,7 +5,8 @@
  */
 
 /dts-v1/;
-#include <st/f4/stm32f405XG.dtsi>
+#include <st/f4/stm32f405Xg.dtsi>
+#include <st/f4/stm32f405rgtx-pinctrl.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
