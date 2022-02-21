@@ -40,8 +40,10 @@ jobs:
         run: cat -n build/zephyr/plapple405.dts.pre.tmp
       - name: p340 Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
+      - name: Rename zmkfile
+        run: cp build/zephyr/zmk.bin plapple405.bin
       - name: Archive (plapple405)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: zmk.*
+          path: plapple405.bin
