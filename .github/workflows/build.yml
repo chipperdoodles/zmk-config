@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: zmkfirmware/zmk-build-arm:2.5
+      image: zmkfirmware/zmk-build-arm:stable
     name: Build
     steps:
       - name: Checkout
@@ -35,9 +35,6 @@ jobs:
         run: west zephyr-export
       - name: West Build (plapple405)
         run: west build -s zmk/app -p -b plapple405 -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: plapple405 DTS File
-        if: ${{ always() }}
-        run: cat -n build/zephyr/plapple405.dts.pre.tmp
       - name: p340 Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmkfile
