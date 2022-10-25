@@ -16,9 +16,10 @@
 		zephyr,code-partition = &code_partition;
 		zephyr,sram = &sram0;
 		zephyr,flash = &flash0;
+		zephyr,display = &oled;
 		zmk,kscan = &kscan0;
 		zmk,matrix_transform = &default_transform;
-		zephyr,display = &oled;
+		zmk,batter = &vbatt;	
 	};
 
 	default_transform: keymap_transform_0 {
@@ -82,9 +83,9 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                RC(4,8) 
 		control-gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
 	};
 
-	vbatt {
+	vbatt: vbatt {
 		compatible = "zmk,battery-voltage-divider";
-		label = "BATTERY";
+		label = "VBATT";
 		io-channels = <&adc 3>;
 		output-ohms = <100000>;
 		full-ohms = <(100000 + 100000)>;
