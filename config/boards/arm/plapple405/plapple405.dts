@@ -16,6 +16,7 @@
 	chosen {
 		zephyr,sram = &sram0;
 		zephyr,flash = &flash0;
+		zephyr,display = &oled;
 		zmk,kscan = &kscan0;
 		zmk,matrix_transform = &default_transform;
 	};
@@ -69,16 +70,39 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                RC(4,8) 
 
 };
 
+&clk_hse{
+	status = "okay";
+	clock-frequency = <DT_FREQ_M(8)>;
+};
+
+&pll {
+	prediv = <8>;
+	mul-n = <336>;
+	div-p = <2>;
+	div-q = <7>;
+	clocks = <&clk_hse>;
+	status = "okay";
+};
+
+&rcc {
+	clocks = <&pll>;
+	clock-frequency = <DT_FREQ_M(168)>;
+	ahb-prescaler = <1>;
+	apb1-prescaler = <4>;
+	apb2-prescaler = <2>;
+};
+
+
 &i2c2 {
 	pinctrl-0 = <&i2c2_scl_pb10 &i2c2_sda_pb11>;
 	status = "okay";
 	clock-frequency = <I2C_BITRATE_FAST>;
 
 
-	ssd1306@3c {
+	oled: ssd1306@3c {
 		compatible = "solomon,ssd1306fb";
 		reg = <0x3c>;
-		label = "DISPLAY";
+		label = "SSD1306";
 		width = <128>;
 		height = <32>;		
 		segment-offset = <0>;
