@@ -71,12 +71,12 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                RC(4,8) 
 };
 
 &clk_hse{
-	clock-frequency = <DT_FREQ_M(8)>;
+	clock-frequency = <DT_FREQ_M(12)>;
 	status = "okay";
 };
 
 &pll {
-	div-m=<8>;
+	div-m=<12>;
 	mul-n = <336>;
 	div-p = <2>;
 	div-q = <7>;
@@ -120,6 +120,7 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                RC(4,8) 
 
 &usbotg_fs {
 	pinctrl-0 = <&usb_otg_fs_dm_pa11 &usb_otg_fs_dp_pa12>;
+	pinctrl-names = "default";
 	status = "okay";
 };
 
