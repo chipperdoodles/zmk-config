@@ -71,12 +71,12 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                RC(4,8) 
 };
 
 &clk_hse{
-	status = "okay";
 	clock-frequency = <DT_FREQ_M(8)>;
+	status = "okay";
 };
 
 &pll {
-	prediv = <8>;
+	div-m=<8>;
 	mul-n = <336>;
 	div-p = <2>;
 	div-q = <7>;
@@ -99,7 +99,7 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                RC(4,8) 
 	clock-frequency = <I2C_BITRATE_FAST>;
 
 
-	oled: ssd1306@3c {
+	oled: ssd1306@3c{
 		compatible = "solomon,ssd1306fb";
 		reg = <0x3c>;
 		label = "SSD1306";
