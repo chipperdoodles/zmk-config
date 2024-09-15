@@ -6,8 +6,9 @@
 
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
-#include <plapple340-pinctrl.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
+
+#include "plapple340-pinctrl.dtsi"
 
 / {
 	model = "plapple340";
