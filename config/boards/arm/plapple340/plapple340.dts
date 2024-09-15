@@ -106,9 +106,9 @@ RC(4,0)   RC(4,1)   RC(4,2)                      RC(4,5)                RC(4,8) 
     pinctrl-1 = <&i2c0_sleep>;
     pinctrl-names = "default", "sleep";
 
-	oled: ssd1306@3D {
+	oled: ssd1306@3d {
 		compatible = "solomon,ssd1306fb";
-		reg = <0x3D>;
+		reg = <0x3d>;
 		label = "SSD1306";
 		width = <128>;
 		height = <64>;		
