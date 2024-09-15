@@ -11,6 +11,12 @@
 #include "plapple340-pinctrl.dtsi"
 
 / {
+  chosen {
+    zephyr,display = &oled;
+  };
+};
+
+/ {
 	model = "plapple340";
 	compatible = "plapple,340";
 
