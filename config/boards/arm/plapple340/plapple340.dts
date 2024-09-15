@@ -6,7 +6,7 @@
 
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
-#include "<board>-pinctrl.dtsi"
+#include "plapple340-pinctrl.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
